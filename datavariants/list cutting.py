@@ -11,8 +11,28 @@ memberlist2 = ['']
     5. 列表[:] 或 列表 [::] ==> 获取所有元素数据 默认步进值为1 脱离裤子放屁多此一举
     
 '''
+<<<<<<< Updated upstream
 result1 = memberlist1[2:]
 result2 = memberlist1[:2]
 result3 = memberlist1[2:6]
 result4 = memberlist1[2:6:2]
 print(result3)
+=======
+# result1 = memberlist1[2:]
+# result2 = memberlist1[:2]
+# result3 = memberlist1[2:6]
+# result4 = memberlist1[2:6:2]
+# print(result3)
+
+# 使用切片方法，对列表数据进行更新和删除
+# 从指定下标开始，到指定下标结束，并替换为对应的数据（容器类型，会拆分成每个元素进行赋值）
+# memberlist1[2:6] = 'abc'  # ['刘德华', '张学友', 'a', 'b', 'c', '刘能', '宋小宝', '赵四']
+# memberlist1[2:6] = ['a', 'b', 'c', 1, 2, 3]  # ['刘德华', '张学友', 'a', 'b', 'b', 1, 2, 3, '刘能', '宋小宝', '赵四']
+
+# 存在步进值的替换需一一对应，若替换元素个数不对应条件检索数则报错
+# memberlist1[2:6:2] = ['a', 'b']  # ['刘德华', '张学友', 'a', '郭富城', 'b', '小沈阳', '刘能', '宋小宝', '赵四']
+
+# 切片删除
+del memberlist1[2:6:2]
+print(memberlist1)
+>>>>>>> Stashed changes
