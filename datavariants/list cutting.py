@@ -11,13 +11,6 @@ memberlist2 = ['']
     5. 列表[:] 或 列表 [::] ==> 获取所有元素数据 默认步进值为1 脱离裤子放屁多此一举
     
 '''
-<<<<<<< Updated upstream
-result1 = memberlist1[2:]
-result2 = memberlist1[:2]
-result3 = memberlist1[2:6]
-result4 = memberlist1[2:6:2]
-print(result3)
-=======
 # result1 = memberlist1[2:]
 # result2 = memberlist1[:2]
 # result3 = memberlist1[2:6]
@@ -35,4 +28,3 @@ print(result3)
 # 切片删除
 del memberlist1[2:6:2]
 print(memberlist1)
->>>>>>> Stashed changes
