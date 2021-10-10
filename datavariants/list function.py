@@ -29,3 +29,42 @@ numlist1 = [1, 2, 3, 4, 11, 22, 33, 44, 1, 2, 3, 4]
 # index() 可以查找指定元素在列表中第一次出现的索引位置
 res = numlist1. index(1, 5, 10)  # 可以在指定索引范围内查找元素的索引位置
 print(res)
+
+# extend()  接收一个容器类型数据， 把容器中的元素追加到原列表中
+# numlist1.extend('123')
+# print(res)
+# print(numlist1)
+
+# s.clear() 清空列表内容
+# res = numlist1.clear()
+# print(res)
+# print(numlist1)
+
+# resverse() 列表翻转
+# res = numlist1.reverse()
+# print(res)
+# print(numlist1)
+
+# sort()  对列表进行排序
+# res = numlist1.sort()  # 默认对元素进行从小到大的排序
+# res = numlist1.sort(reverse=True)  # 对元素进行从大到小的排序
+# res = numlist1.sort(key=abs)  # 可以传递一个函数，按照函数处理结果进行从小到大排序
+
+# copy()  拷贝，复制当前的列表
+# 在单维列表中对副本进行操作，对原品无影响
+# res = numlist1.copy()
+# print(res)
+# print(numlist1)
+
+# 定义多维列表
+numlist2 = ['a', 'b', 'c', [11, 22, 33]]
+res = numlist2.copy()
+
+# 对 copy 的子列表进行操作
+del res[3][1]  # 对多维列表进行操作，副本与原品均会发生改变
+print(res)
+print(numlist2)
+'''
+['a', 'b', 'c', [11, 33]]
+['a', 'b', 'c', [11, 33]]
+'''
