@@ -45,7 +45,7 @@ for x in a:
 
 print(combo)
 
-#
+# 对于嵌套循环的列表推导式
 '''
 # Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4
 matrix = [     
@@ -71,7 +71,7 @@ matrix1 = [
 # print(matrix2)
 
 matrix2 = [[row[i] for row in matrix1] for i in range(4)]
-print(matrix2) 
+print(matrix2)
 
 
 
