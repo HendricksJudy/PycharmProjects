@@ -26,7 +26,54 @@ print(doublenum2)
 # 0-9 求所有的偶数
 numlist1 = []
 for x in range(10):
-    numlist1.append(x)
+    if x%2 == 0:
+        numlist1.append(x)
 
-evennum = [x for x in numlist1, if x %2== 0]
+print(numlist1)
+
+# numlist1 = [x for x in range(10) if i % 2 == 0] 在3.7版本之前可用 新版需使用正规 for 语句进行推导式书写
+
+# 带有条件判断的多循环的推导式
+# [1, 2, 3] , [3, 1 ,4] ==> 把两个列表中的元素 两两组合， 要求组合的元素不能重复
+a = [1, 2, 3]
+b = [3, 1 ,4]
+combo = []
+for x in a:
+    for y in b:
+        if x != y:
+            combo.append((x, y))  # [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
+print(combo)
+
+#
+'''
+# Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4
+matrix = [     
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+ ]
+'''
+
+matrix1 = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+ ]
+# 常规
+# matrix2 = []
+# for i in range(4):
+#     res = []
+#     for row in matrix1:
+#          res.append(row[i])
+#     matrix2.append(res)
+#
+# print(matrix2)
+
+matrix2 = [[row[i] for row in matrix1] for i in range(4)]
+print(matrix2) 
+
+
+
+
 
