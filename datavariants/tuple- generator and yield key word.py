@@ -49,5 +49,17 @@ world 2
 '''
 
 # 练习题： 使用 生成器 改写 斐波那契数列函数
+def fibo(num):
+        a, b, i = 0, 1, 0
+        while i < num:
+            yield b
+            a, b = b, a+b
+            i += 1
 
+# container1 = fibo(10)
+# print(container1)
+# print(list(container1))
 
+num = int(input('请输入一个正整数：'))
+for i in fibo(num):
+    print(i, end=", ")
