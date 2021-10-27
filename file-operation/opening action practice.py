@@ -24,5 +24,9 @@ a+ 可读 追加写入
 x+ 异或 用于不存在文件创建并写入
 '''
 with open('./1.txt', 'r+', encoding='utf-8') as Myfristfile:
+    Myfristfile.write('BB')
+
+    # 设置指针的位置
+    Myfristfile.seek(0)  # 设置当前指针的位置 seek(0，最开始的位置
     res = Myfristfile.read()
     print(res)
