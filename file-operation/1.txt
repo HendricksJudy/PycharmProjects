@@ -1,2 +1,1 @@
-BBlo world
-你好
+hello world

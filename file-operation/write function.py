@@ -23,8 +23,8 @@ res = fp.read()  # 默认从当前指针开始读取到最后 如果内含数字
 #      res1 = fp.read()
 
 # 截断文件内容 truncate()
-with open('./test/4.txt', 'r+', encoding='utf-8') as fp:
-     res6 = fp.truncate(5)  # 默认从文件的首个字符进行截断，截断的长度为size个字节数 size如果为0，则从当前位置截断到最后
+# with open('./test/4.txt', 'r+', encoding='utf-8') as fp:
+#      res6 = fp.truncate(5)  # 默认从文件的首个字符进行截断，截断的长度为size个字节数 size如果为0，则从当前位置截断到最后
 
 
 # 使用数据写入的方式，完成一个注册和登录
