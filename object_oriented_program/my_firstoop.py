@@ -34,3 +34,4 @@ xiaoMi.run()
 
 # 获取对象属性
 print(xiaoMi.color)
+
