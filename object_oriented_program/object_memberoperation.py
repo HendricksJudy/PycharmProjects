@@ -1,7 +1,7 @@
 # 对象成员的操作
-'''
+"""
 对象成员：一个对象对象实例化后，在类中定义的属性和方法，可以使用实例化得对象进行操作
-'''
+"""
 
 
 class car():
@@ -10,7 +10,7 @@ class car():
     brand = 'XiaoMi'
 
     # 功能 ==> 能力 ==> 函数
-    def run(self):
+    def running(self):
         print('the car could take the cargo')
 
     def stop(self):
@@ -36,21 +36,43 @@ c1和c2变量都是对象，通过c1和c2变量都可以访问到car类中的属
 '''
 1. 在类的外部，使用对象操作成员
 '''
-c1.color = 'black'  # 修改对象的属性 修改A对象对其他对象无影响 实际上等于是给此对象创建了一个c1对象自己的color属性
-cd1 = c1.color  # 通过对象访问属性
-print(cd1)
-c1.name = 'A6'  # 给对象添加属性，不对类生效
+# c1.color = 'black'  # 修改对象的属性 修改A对象对其他对象无影响 实际上等于是给此对象创建了一个c1对象自己的color属性
+# cd1 = c1.color  # 通过对象访问属性
+# print(cd1)
+# c1.name = 'A6'  # 给对象添加属性，不对类生效
 
 
 # 删除属性 只能删除这个对象自己的属性，包括给对象添加的和修改的
 # del c1.brand # 删除对象的属性 AttributeError: brand 类属性无法删除
-del c1.name
-print(c1.name)  # AttributeError: 'car' object has no attribute 'name' 对象属性可以删除
+# del c1.name
+# print(c1.name)  # AttributeError: 'car' object has no attribute 'name' 对象属性可以删除
 '''
 删除一个对象的属性，只是删除了对象的属性，对类的属性没有影响，同时对类赋予对象的属性无法删除
 '''
-action1 = c1.run()  # 通过对象访问类中方法
-print(action1)
+# action1 = c1.run()  # 通过对象访问类中方法
+# print(action1)
 
 # 在类的外部，操作对象的方法
 # 访问对象的方法：实际上如果这个对象没有这个方法，会自动调用类中的方法
+
+# 修改对象的方法
+def func():
+    print('This is a new method called new method')
+
+c1.running = func  # 把一个函数赋值给成员
+c1.running()
+
+# 添加新的方法
+def new_func():
+    print('This is a new method called new method too')
+
+c1.func_new = new_func  # 可以删除对象的自己方法
+c1.func_new()
+'''
+创建对象的时候，并不会把类中的属性和方法复制给对象，而是在对象中引用类中的属性和方法
+因此在访问对象属性时，会先去找对象自己的属性，如果没有再去找类的属性和方法
+
+所以对象的修改属性和方法，不会影响类的属性和方法
+'''
+
+
