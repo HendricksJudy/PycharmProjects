@@ -35,7 +35,7 @@ class MyLog():
         # 初始化方法，并打开文件
         self.logobj = open(self.fileURL + self.filename, 'a+', encoding='utf-8')
 
-    def writeLog(self, msg):
+    def writelog(self, msg):
         # 准备写入信息
         now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         logmsg = now + ' ' + msg + '\n'
@@ -50,4 +50,4 @@ class MyLog():
 
 
 todayrecord = MyLog()
-todayrecord.writeLog('今天也是用Copilot的一天！')
+todayrecord.writelog('今天也是用Copilot的一天！')
