@@ -216,7 +216,7 @@ if __name__ == '__main__':
         print(welcomeMessage)
 
         # 让用户选择对应操作
-        choicenum = input('请输入对应的序号，体验功能：')
+        choicenum = input('请输入对应括号内的字符，体验功能：')
         if choicenum == '0':
             login()
             successfully1 = False
