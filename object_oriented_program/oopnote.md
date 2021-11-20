@@ -74,6 +74,9 @@
 # 类关系检测
 > issubclass() 检测一个类是否时另一个类的子类
 
+>  类名.mro()  # 获取MRO列表
+> 
+> 检测 A 是否为 B 的子类 res = issubclass(A, B)
 
 
-
+# 多态
