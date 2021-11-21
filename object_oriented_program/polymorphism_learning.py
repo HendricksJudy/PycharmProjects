@@ -43,3 +43,10 @@ computer_1.usb(keyboard_1)
 
 # 把显示器通过HDMI连接电脑
 computer_1.hdmi(monitor_1)
+
+"""
+停更说明
+
+家中突发变故，无法继续学习
+
+"""
